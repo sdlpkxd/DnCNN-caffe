@@ -14,26 +14,27 @@ noiseSigma = 8;
 
 filepaths = dir(fullfile(folder,'*.png'));
 
-    for i = 1 : length(filepaths)
-        image = imread(fullfile(folder,filepaths(i).name));
-        image = im2double(image);
-        [hei,wid] = size(image);
-        im_input = image;
+for i = 1 : length(filepaths)
 
-        for x = 1 : stride : hei-size_input+1
-            for y = 1 :stride : wid-size_input+1
-                subim_input = im_input(x : x+size_input-1, y : y+size_input-1);
-                randn('seed',0);
-                noise = noiseSigma/255*randn(size(subim_input));
-                subim_input = subim_input + noise;
-                subim_label = noise;
+    image = imread(fullfile(folder,filepaths(i).name));
+    image = im2double(image);
+    [hei,wid] = size(image);
+    im_input = image;
 
-                count=count+1;
-                data(:, :, 1, count) = subim_input;
-                label(:, :, 1, count) = subim_label;
-            end
+    for x = 1 : stride : hei-size_input+1
+        for y = 1 :stride : wid-size_input+1
+            subim_input = im_input(x : x+size_input-1, y : y+size_input-1);
+            randn('seed',0);
+            noise = noiseSigma/255*randn(size(subim_input));
+            subim_input = subim_input + noise;
+            subim_label = noise;
+
+            count=count+1;
+            data(:, :, 1, count) = subim_input;
+            label(:, :, 1, count) = subim_label;
         end
-    end    
+    end
+end
 
 order = randperm(count);
 data = data(:, :, 1, order);
