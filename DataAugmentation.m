@@ -1,6 +1,6 @@
 clear all;
 close all;
-folder = 'C:/Users/sm/Desktop/DnCNN/data/Train400';
+folder = 'Train400';
 savepath = 'Train400-aug/';
 
 filepaths = [dir(fullfile(folder, '*.jpg'));dir(fullfile(folder, '*.bmp'));dir(fullfile(folder, '*.png'))];
