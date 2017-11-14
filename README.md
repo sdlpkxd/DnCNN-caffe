@@ -5,3 +5,7 @@ A caffe implement of  the TIP2017 paper Beyond a Gaussian Denoiser: Residual Lea
 ![image](https://github.com/sdlpkxd/DnCNN-caffe/blob/master/DnCNN-Structure.png)
 # Note
 I will updata this project and the results in the future.
+
+#Thanks
+Thanks @crisb-DUT very much for his/her tensorflow implement!
+Thanks @cszn very much for his/her matlab implement!
