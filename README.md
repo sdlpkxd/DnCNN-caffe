@@ -8,6 +8,6 @@ I will updata this project and the results in the future.
 
 # Thanks
 
-Thanks @crisb-DUT very much for his/her matlab implement! https://github.com/crisb-DUT/DnCNN-tensorflow
+Thanks @crisb-DUT very much for his/her tensorflow implement! https://github.com/crisb-DUT/DnCNN-tensorflow
 
-Thanks @cszn very much for his/her tensorflow implement! https://github.com/cszn/DnCNN
+Thanks @cszn very much for his/her matlab implement! https://github.com/cszn/DnCNN
