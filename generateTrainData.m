@@ -1,7 +1,7 @@
 clear;close all;
 %% settings
-folder = 'D:\caffe_DnCNN\trainData\Train400-aug';
-savepath = 'D:\caffe_DnCNN\trainData\train.h5';
+folder = 'Train400-aug';
+savepath = 'train.h5';
 size_input = 40;
 size_label = 40;
 stride = 20;
