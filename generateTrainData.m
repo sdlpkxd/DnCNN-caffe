@@ -15,6 +15,7 @@ noiseSigma = 8;
 %% generate data
 filepaths = dir(fullfile(folder,'*.bmp'));
 
+randn('seed',0);
 for i = 1 : length(filepaths)
 
     image = imread(fullfile(folder,filepaths(i).name));
@@ -25,7 +26,6 @@ for i = 1 : length(filepaths)
     for x = 1 : stride : hei-size_input+1
         for y = 1 :stride : wid-size_input+1
             subim_input = im_input(x : x+size_input-1, y : y+size_input-1);
-            randn('seed',0);
             noise = noiseSigma/255*randn(size(subim_input));
             subim_input = subim_input + noise;
             subim_label = noise;
