@@ -7,12 +7,15 @@ A caffe implement of  the TIP2017 paper Beyond a Gaussian Denoiser: Residual Lea
 # Result
 
 OriginImagorige
+
 ![image](https://github.com/sdlpkxd/DnCNN-caffe/blob/master/picture/OrgImage.png)
 
 NoisedImage
+
 ![image](https://github.com/sdlpkxd/DnCNN-caffe/blob/master/picture/NoisedImage.png)
 
 DenoisedImage
+
 ![image](https://github.com/sdlpkxd/DnCNN-caffe/blob/master/picture/DenoisedImage.png)
 
 # Note
