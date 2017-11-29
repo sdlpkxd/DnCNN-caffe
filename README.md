@@ -5,7 +5,7 @@ A caffe implement of  the TIP2017 paper Beyond a Gaussian Denoiser: Residual Lea
 ![image](https://github.com/sdlpkxd/DnCNN-caffe/blob/master/DnCNN-Structure.png)
 
 # Result
-![image](https://github.com/sdlpkxd/DnCNN-caffe/blob/master/results.png)
+![image](https://github.com/sdlpkxd/DnCNN-caffe/blob/master/picture/results.png)
 
 
 # Note
