@@ -26,7 +26,10 @@ for i = 1 : length(filepaths)
         for y = 1 :stride : wid-size_input+1
             subim_input = im_input(x : x+size_input-1, y : y+size_input-1);
             noise = noiseSigma/255*randn(size(subim_input));
+            #clip the input image to [0,1]
             subim_input = subim_input + noise;
+            subim_input(subim_input>1) = 1;
+            subim_input(subim_input<0) = 0;
             subim_label = noise;
 
             count=count+1;
