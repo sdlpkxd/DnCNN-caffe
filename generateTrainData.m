@@ -25,14 +25,14 @@ for i = 1 : length(filepaths)
 
     for x = 1 : stride : hei-size_input+1
         for y = 1 :stride : wid-size_input+1
-            subim_input = im_input(x : x+size_input-1, y : y+size_input-1);
-            noise = noiseSigma/255*randn(size(subim_input));
-            # we should clip the input image to (0,1)
-            subim_input = subim_input + noise;
+            subim_clean = im_input(x : x+size_input-1, y : y+size_input-1);
+            noise = noiseSigma/255*randn(size(subim_clean));
+            # we should clip the input image to (0,1) and get the noise by subim_input - subim_clean
+            subim_input = subim_clean + noise;
             subim_input(subim_input>1) = 1;
             subim_input(subim_input<0) = 0;
             
-            subim_label = noise;
+            subim_label = subim_input - subim_clean;
             count=count+1;
             data(:, :, 1, count) = subim_input;
             label(:, :, 1, count) = subim_label;
